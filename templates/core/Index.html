@@ -53,9 +53,8 @@
                     <div class="block-menu">
                         <ul>
                             {% for obj in categories %}
-                            <li><a href="/grazhdlyrics.html">{{ obj.title }}</a></li>
+                            <li><a href="/lyrics?category_id={{ obj.id }}">{{ obj.title }}</a></li>
                             {% endfor %}
-                            <li class="none-bg"><a href="/otherlyrics.html">Без рубрики</a></li>
                         </ul>
                     </div>
                     <div class="block-pod-menu"></div>

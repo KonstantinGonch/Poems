@@ -15,11 +15,17 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf.urls import url
+from django.urls import include
+from filebrowser.sites import site
 
 from core import views
 
 urlpatterns = [
+    url(r'^tinymce/', include('tinymce.urls')),
     path('', views.index, name='index'),
+    url(r'^admin/filebrowser/', site.urls),
+    url(r'^grappelli/', include('grappelli.urls')),
     path('admin/', admin.site.urls),
     path('about-author/', views.about_author),
     path('publications/', views.publications),

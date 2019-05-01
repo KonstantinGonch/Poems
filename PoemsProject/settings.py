@@ -31,13 +31,16 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'filebrowser',
+    'grappelli',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'core'
+    'core',
+    'tinymce',
 ]
 
 MIDDLEWARE = [
@@ -68,6 +71,13 @@ TEMPLATES = [
         },
     },
 ]
+
+TINYMCE_DEFAULT_CONFIG = {
+    'height': 360,
+    'width': 1120,
+    'cleanup_on_startup': True,
+
+    }
 
 WSGI_APPLICATION = 'PoemsProject.wsgi.application'
 
@@ -121,3 +131,4 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join('static'), )
+
