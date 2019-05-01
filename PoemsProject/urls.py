@@ -29,6 +29,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('about-author/', views.about_author),
     path('publications/', views.publications),
-    path('Contacts/', views.contacts)
+    path('Contacts/', views.contacts),
+    path('lyrics_list/', views.lyrics_list),
+    path('poem/', views.poem)
 ]
 

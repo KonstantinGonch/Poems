@@ -1,31 +1,6 @@
-﻿{% load static %}
-
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>obomne</title>
-    <link rel="stylesheet" href="{% static 'core/css/Style.css' %}" type="text/css" />
-</head>
-<body>
-
-    <div id="basic">
-
-
-        <div id="head-site">
-            <a href="/"><img src="{% static 'core/images/195087.jpg' %}" alt="Стихи Геннадия Молдавского" title="Стихи Геннадия Молдавского" /> </a>
-            <img src="" alt="" title="" />
-        </div>
-
-        <style>
-            h1 {
-                font-family: 'Times New Roman', Times, serif; /* Гарнитура текста */
-                font-size: 250%; /* Размер шрифта в процентах */
-            }
-        </style>
-        <h1>Добро пожаловать!</h1>
-        <p><h1>Здесь я расскажу вам о себе.</h1></p>
-    </div>
-</body>
-</html>
+﻿{% extends 'core/base.html' %}
+{% block content %}
+    <h1>Добро пожаловать!</h1>
+    <p><h1>Здесь я расскажу вам о себе.</h1></p>
+{% endblock %}
 

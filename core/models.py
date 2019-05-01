@@ -11,7 +11,7 @@ class Category(models.Model):
 
 class Poem(models.Model):
     title = models.CharField(max_length=50)
-    text = models.TextField()
+    text = HTMLField(default="")
     category = models.ForeignKey(Category, null=True, on_delete=models.SET_NULL)
 
     def __str__(self):

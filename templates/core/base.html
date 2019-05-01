@@ -1,0 +1,54 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Moldavski</title>
+    <link rel="stylesheet" href="{% static 'core/css/Style.css' %}" type="text/css" />
+</head>
+<body>
+
+    <div id="basic">
+
+        <div id="head-site">
+            <a href="/"><img src="{% static 'core/images/195087.jpg' %}" alt="Стихи Геннадия Молдавского" title="Стихи Геннадия Молдавского" /> </a>
+            <img src="" alt="" title="" />
+        </div>
+
+        <!-- Верхнее меню сайта -->
+        <div id="menu-top">
+            <div class="bg-1">
+                <ul>
+                    <li><a href="/about-author">Обо мне</a></li>
+                    <li><a href="/publications">Публикации</a></li>
+                    <li><a href="#">О портале</a></li>
+                    <li class="none-bg"><a href="/Contacts">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="bg-2"></div>
+        </div>
+
+        <!-- Левое меню и Контент -->
+        <div id="content">
+            {% block content %}
+            {% endblock %}
+        </div>
+        <div class="myclr"></div>
+
+        <!-- Подвал -->
+        <div id="podval">
+            <div class="yellow"></div>
+            <div class="p1">
+                “Авторство Бережной А.” 2019г.<br />
+
+            </div>
+            <div class="p3"><img src="/images/stat.png" alt="" title="" /></div>
+            <div class="p2">Г.Молдавский <a href="#">«СТИХИ»</a></div>
+
+        </div>
+        <div class="myclr"></div>
+
+    </div>
+</body>
+</html>

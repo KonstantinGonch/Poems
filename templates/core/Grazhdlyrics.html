@@ -1,17 +1,12 @@
-﻿<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>publications</title>
-    <link rel="stylesheet" href="style.css" type="text/css" />
-</head>
-<body>
-    <div id="basic">
+﻿{% extends 'core/base.html' %}
+{% block content %}
+    <h2>{{ category.title }}</h2>
 
-        <div id="head-site">
-            <a href="/Index.html"><img src="../../static/core/images/195087.jpg" alt="Стихи Геннадия Молдавского" title="Стихи Геннадия Молдавского" /> </a>
-            <img src="" alt="" title="" />
+        <div id="poems-list">
+        <ul>
+            {% for poem in poems %}
+                <li><a href="/poem?id={{ poem.id }}">{{ poem.title }}</a></li>
+            {% endfor %}
+        </ul>
         </div>
-
-</body>
-</html>
+{% endblock %}

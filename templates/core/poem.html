@@ -1,0 +1,5 @@
+{% extends 'core/base.html' %}
+{% block content %}
+    <h2>{{ poem.title }}</h2>
+    <p>{% autoescape off %}{{ poem.text }} {% endautoescape %}</p>
+{% endblock %}
